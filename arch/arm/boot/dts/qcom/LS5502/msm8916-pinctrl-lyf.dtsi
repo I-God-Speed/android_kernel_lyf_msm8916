@@ -1,0 +1,113 @@
+/* Copyright (c) 2020, The Linux Foundation. All rights reserved.
+*  Copyright (c) 2020, the_shahnawaz_sheikh (sheikhshahnawaz41299).
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License version 2 and
+* only version 2 as published by the Free Software Foundation.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*/
+ 
+&tlmm_pinmux {
+	
+	
+	pmx_mdss {
+				active {
+					output-high;
+				};
+
+				suspend {
+					bias-pull-down;
+					output-low;
+				};
+			};
+			
+	button_backlight_pin {
+				qcom,pins = <&gp 8>;
+			};
+	
+	tps65132-en-pin {
+				qcom,pins = <&gp 97 &gp 98>;
+				qcom,num-grp-pins = <2>;
+				label = "tps65132_en_pins";
+				qcom,pin-func = <0>;
+
+				tps65132_en_pins: en-default {
+					drive-strength = <2>;
+					bias-pull-down;
+				};
+		};
+
+		tmd27723xx_int_pin {
+				qcom,pins = <&gp 113>;
+				qcom,pin-func = <0>;
+				qcom,num-grp-pins = <1>;
+				label = "tmd27723-irq";
+
+				tmd27723_default {
+					drive-strength = <6>;
+					bias-pull-up;
+				};
+
+				tmd27723_sleep {
+					drive-strength = <2>;
+					bias-pull-down;
+				};
+			};
+
+	goodix_ts_int {
+		qcom,pins = <&gp 13>;
+		qcom,pin-func = <0>;
+		qcom,num-grp-pins = <1>;
+		label = "goodix_ts_int";
+
+		gdix_ts_int_default: gdix_ts_int_default {
+			drive-strength = <2>;
+			input-enable;
+			bias-disable;
+		};
+
+		gdix_ts_int_output_high: gdix_ts_int_output_high {
+			output-high;
+		};
+
+		gdix_ts_int_output_low: gdix_ts_int_output_low {
+			output-low;
+		};
+
+		gdix_ts_int_input: gdix_ts_int_input {
+			input-enable;
+			bias-disable;
+		};
+	};
+
+	goodix_ts_rst {
+		qcom,pins = <&gp 12>;
+		qcom,pin-func = <0>;
+		qcom,num-grp-pins = <1>;
+		label = "goodix_ts_rst";
+
+		gdix_ts_rst_default: gdix_ts_rst_default {
+			drive-strength = <2>;
+			input-enable;
+			bias-disable;
+		};
+
+		gdix_ts_rst_output_high: gdix_ts_rst_output_high {
+			output-high;
+		};
+
+		gdix_ts_rst_output_low: gdix_ts_rst_output_low {
+			output-low;
+		};
+
+		gdix_ts_rst_input: gdix_ts_rst_input {
+			input-enable;
+			bias-disable;
+		};
+	};
+         
+};
