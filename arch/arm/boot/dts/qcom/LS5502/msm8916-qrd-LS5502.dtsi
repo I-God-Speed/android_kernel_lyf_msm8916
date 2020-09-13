@@ -95,8 +95,8 @@
 			touchscreen-size-y = <1280>;
 			touchscreen-max-w = <512>;
 			touchscreen-max-p = <512>;
-			touchscreen-key-map = <158>, <102>, <139>; /*KEY_BACK=158，KEY_HOMEPAGE=102, KEY_MENU=139*/
-			goodix,slide-wakeup = <0>;
+			touchscreen-key-map = <139>, <102>, <158>; /*KEY_MENU=139，KEY_HOMEPAGE=102, KEY_BACK=158*/
+			goodix,slide-wakeup = <1>;
 			goodix,type-a-report = <0>;
 			goodix,driver-send-cfg = <1>;
 			goodix,resume-in-workqueue = <0>;
