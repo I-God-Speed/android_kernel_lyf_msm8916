@@ -3202,6 +3202,10 @@ CONFIG_QCOM_TDLS=y
 #
 # CONFIG_MACH_CRACKLING is not set
 
+# LYF board selection
+#
+CONFIG_MACH_LS5502=y
+
 #
 # Qualcomm MSM specific device drivers
 #
